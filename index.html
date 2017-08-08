@@ -2,24 +2,128 @@
 <html>
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1,minimum-scale=1">
     <title>weibo</title>
     <link rel="stylesheet" type="text/css" href="style/main.css">
 </head>
 <body>
     <div class="head">
         <div class="head-content">
-            <a href="#" class>weibo</a>
-            <input type="text" class="search-input" />
-            <ul class="head-nav">
-                <li><a href="">首页</a></li>
-                <li><a href="">视频</a></li>
-                <li><a href="">发现</a></li>
-                <li><a href="">游戏</a></li>
-            </ul>
-            <ul class="logon">
-                <li><a href="">注册</a></li>
-                <li><a href="">登录</a></li>
-            </ul>
+            <a href="#" class="logo">weibo</a>
+            <div class="search-block">
+                <input type="text" class="search-input" placeholder="大家正在搜：关之琳 永不复出拍戏" />
+                <a href="#" class="search-btn"></a>
+            </div>
+            <div class="right">
+                 <ul class="head-nav">
+                    <li><a href="" class="icon-home">首页</a></li>
+                    <li><a href="" class="icon-vedio">视频</a></li>
+                    <li><a href="" class="icon-found">发现</a></li>
+                    <li><a href="" class="icon-game">游戏</a></li>
+                </ul>
+                <ul class="logon">
+                    <li><a href="">注册</a></li>
+                    <li class="divider"></li>
+                    <li><a href="">登录</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="main-content">
+            <div class="main-l">
+                <ul class="menu">
+                    <li><a href="#" class="menu-item cur">热门</a></li>
+                    <li><a href="#" class="menu-item">明星</a></li>
+                    <li><a href="#" class="menu-item">头条</a></li>
+                    <li><a href="#" class="menu-item">视频</a></li>
+                    <li><a href="#" class="menu-item">新鲜事</a></li>
+                    <li><a href="#" class="menu-item">榜单</a></li>
+                    <li><a href="#" class="menu-item">搞笑</a></li>
+                    <li><a href="#" class="menu-item">社会</a></li>
+                    <li><a href="#" class="menu-item">情感</a></li>
+                    <li><a href="#" class="menu-item">时尚</a></li>
+                    <li><a href="#" class="menu-item">军事</a></li>
+                    <li><a href="#" class="menu-item">美女</a></li>
+                    <li><a href="#" class="menu-item">体育</a></li>
+                    <li><a href="#" class="menu-item">动漫</a></li>
+                </ul>
+            </div>
+            <div class="main-m">
+                <div class="slider">
+                    <ul class="header-slider">
+                        <li>
+                            <a href="#">
+                                <img src="../images/pic1.jpg" class="pic">
+                                <div class="pic-intro">恶搞童年，你认真了吗</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../images/pic2.jpg" class="pic">
+                                <div class="pic-intro">语文教材文言文比例飙升</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../images/pic3.jpg" class="pic">
+                                <div class="pic-intro">国际军事比赛-2017，中俄等五国上演军事全能大战</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../images/pic4.jpg" class="pic">
+                                <div class="pic-intro">爱是藏不住的！张若昀这些小细节透露他有多爱唐艺昕</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../images/pic5.jpg" class="pic">
+                                <div class="pic-intro">人人都夸的北欧风啊，它究竟美在哪？</div>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="dot-box">
+                        <li><a href="" class="dot-item cur"></a></li>
+                        <li><a href="" class="dot-item"></a></li>
+                        <li><a href="" class="dot-item"></a></li>
+                        <li><a href="" class="dot-item"></a></li>
+                        <li><a href="" class="dot-item"></a></li>
+                    </ul>
+                </div>
+                <div class="new-info">您有未读内容，点击查看 <span class="icon-close"></span></div>
+                <div class="feed-list">
+                    <div class="list-v2">
+                        <div class="img-vedio">
+                            <img src="../images/img1.jpg">
+                            <i class="icon-play"></i>
+                        </div>
+                        <div class="list-desc">
+                            <p class="desc-intro"><a href="#">北京地铁2号线东直门站，地铁进站时一乘客被意外卷入卡在了车厢与站台间，原本只有工作人员在推车，紧接着传说中众志成城的一幕发生了，在场的老少爷们儿纷纷上前，喊着口号，齐力推车挽救生命！最终伤者被救出，站台掌声一片！！！太感人了…</a></p>
+                            <div class="subinfo">
+                                <a href=""><img src="" class="avatar"></a>
+                                <a href="" class="nickname">北京人不知道的北京事儿</a>
+                                <span class="date">8月3日 20:44</span>
+                            </div>
+                            <ul class="action-list">
+                                <li>
+                                    <span class="icon-share"></span>
+                                    <a href="#" class="num">15519</a>
+                                </li>
+                                <li>
+                                    <span class="icon-comment"></span>
+                                    <a href="#" class="num">12275</a>
+                                </li>
+                                <li>
+                                    <span class="icon-praise"></span>
+                                    <a href="#" class="num">109024</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-r">r</div>
         </div>
     </div>
 </body>
