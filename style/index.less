@@ -202,10 +202,16 @@
 
         .pic-intro {
             position: absolute;
-            left: 10px;
-            bottom: 10px;
+            left: 0;
+            bottom: 0;
             color: #fff;
             font-size: 20px;
+            width: 100%;
+            height: 48px;
+            line-height: 48px;
+            padding-left: 10px;
+            box-sizing: border-box;
+            background: linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
         }
     }
     
@@ -263,6 +269,9 @@
 .list-v2 {
     border-bottom: 1px solid #e5e5e5;
     padding-bottom: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    color: @txt-light;
     .clearfix();
 
     .img-vedio {
@@ -271,10 +280,290 @@
         overflow: hidden;
         float: left;
         margin-right: 25px;
+        position: relative;
 
         img {
             width: 100%;
+            height: 100%;
             object-fit: cover;
+        }
+
+        .icon-play {
+            display: block;
+            position: absolute;
+            width: 57px;
+            height: 55px;
+            top: 50%;
+            left: 50%;
+            margin-top: -28px;
+            margin-left: -28px;
+            background: url("../images/icon-play.png") no-repeat top left;
+        }
+    }
+
+    .desc-intro {
+        color: #333;
+        line-height: 24px;
+        max-height: 96px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical; 
+    }
+
+    .action-list {
+        position: absolute;
+        bottom: 10px;
+        right: 0;
+    }
+}
+.subinfo {
+    margin-top: 10px;
+    color: #808080;
+
+    .avatar {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        display: inline-block;
+        vertical-align: top;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .nickname {
+        height: 20px;
+        line-height: 20px;
+        color: @txt-light;
+        margin-right: 12px; 
+    }   
+}
+
+
+.action-list {
+    li {
+        float: left;
+        height: 20px;
+        line-height: 20px;
+    }
+
+    .divider {
+        background: #cccccc;
+        width: 1px;
+        height: 10px;
+        margin: 4px 8px;
+    }
+
+    .num {
+        color: @txt-light;
+    }
+
+    span {
+        width: 15px;
+        height: 20px;
+        margin-right: 6px;
+        display: inline-block;
+        vertical-align: bottom;
+    }
+
+    .icon-share {
+        background: url("../images/icon-share.png") no-repeat center left;
+    }
+
+    .icon-comment {
+        background: url("../images/icon-comment.png") no-repeat center left;
+    }
+
+    .icon-praise {
+        background: url("../images/icon-praise.png") no-repeat center left; 
+    }
+}
+.list-b {
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    .clearfix();
+
+    .pic {
+        width: 158px;
+        height: 102px;
+        float: left;
+        margin-right: 13px;
+
+        img {
+            width: 100%;
+            height: 100%; 
+        }
+    }
+
+    .list-desc-b {
+        display: table-cell;
+        vertical-align: middle;
+        height: 102px;
+    }
+
+    .desc-intro-b {
+        color: #333;
+        font-size: 20px;
+        line-height: 24px;
+        font-weight: bold;
+    }
+
+    .subinfo {
+        .action-list {
+            float: right;
+        }
+    }
+}
+.list-a {
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+
+    .desc-intro-a {
+        color: #333;
+        font-size: 14px;
+        .text-ellipsis();
+        width: 660px;
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .pic-list {
+        .clearfix();
+
+        li {
+            width: 158px;
+            height: 102px;
+            float: left;
+            margin-right: 6px;
+            overflow: hidden;
+        }
+        img {
+            width: 100%;
+        }
+    }
+
+    .subinfo {
+        .action-list {
+            float: right;
+        }
+    }
+}
+.logon-box {
+    background: @side-column-color;
+    color: @txt-light;
+    padding: 20px; 
+
+    .logon-content {
+        background: #fff;
+        border-radius: 3px;
+        padding: 10px;
+        box-shadow: 0px 0px 2px rgba(0, 0, 0, .15);
+        position: relative;
+
+        .change-btn {
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            background: url("../images/sprite_login.png") no-repeat;
+            background-position: -40px -191px;
+        }
+    }
+
+    .logon-tab {
+        font-size: 14px;
+        text-align: center;
+        border-bottom: 1px solid rgba(204,204,204,.5);
+        margin-bottom: 16px;
+        .clearfix();
+
+        li {
+            float: left;
+            width: 50%;
+            height: 30px;
+            line-height: 30px;
+            border-bottom: 3px solid transparent;
+            margin-bottom: -1px;
+
+            &.cur {
+                border-bottom-color: #fa7d3c;
+                color: #000;
+            }
+        }
+    }
+
+    .account-input,
+    .password-input {
+        width: 100%;
+        height: 28px;
+        border: 1px solid #ccc;
+        padding-left: 36px;
+        box-sizing: border-box;
+    }
+
+    .account-input {
+        background: url("../images/icon-account.png") no-repeat 12px center;
+        margin-bottom: 12px;
+    }
+
+    .password-input {
+        background: url("../images/icon-password.png") no-repeat 12px center;
+        margin-bottom: 12px;
+    }
+
+    .ckb {
+        vertical-align: middle;
+        margin-right: 5px;
+    }
+
+    .forget {
+        float: right;
+    }
+
+    .logon-btn {
+        background: #ff8140;
+        border: 1px solid #f77c3d;
+        border-radius: 3px;
+        color: #fff;
+        margin-top: 12px;
+        width: 100%;
+        height: 34px;
+        line-height: 34px;
+        text-align: center;
+        font-size: 16px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+        box-sizing: border-box;
+    }
+
+    .register {
+        margin-top: 12px;
+        a{
+            color: #eb7350;
+        }
+    }
+
+    .logon-list {
+        margin-top: 12px;
+        border-top: 1px solid #ccc;
+        border-top-color: rgba(204, 204, 204, 0.5);
+        padding-top: 10px;
+
+        a {
+            width: 17px;
+            height: 17px;
+            margin-right: 3px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .icon-taobao {
+            background: url("../images/icon-taobao.png") no-repeat top left;
         }
     }
 }
