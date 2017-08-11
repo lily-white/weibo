@@ -58,7 +58,7 @@ dfn {
 }
 h1 {
   font-size: 2em;
-  margin: 0.67em 0;
+  margin: 0;
 }
 mark {
   background: #ff0;
@@ -185,5 +185,8 @@ ol {
   padding: 0;
 }
 p {
+  margin: 0;
+}
+h6 {
   margin: 0;
 }
