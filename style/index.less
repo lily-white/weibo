@@ -136,6 +136,7 @@
 }
 .main-content {
     width: 1170px;
+    min-width: 800px;
     margin: 0 auto;
     padding-top: 16px;
     font-size: 0;
@@ -160,11 +161,15 @@
         width: 340px;
     }
 
+    @media screen and (max-width: @screen-md-max) {
+        .main-r {
+            display: none;
+        }
+    }
     .menu li {
         margin-bottom: 3px;
     } 
 }
-
 .menu-item {
     display: block;
     width: 110px;
@@ -626,6 +631,12 @@
             margin: 0 0 0 10px;
         }
 
+        .news-content-r {
+            height: 70px;
+            display: table-cell;
+            vertical-align: middle;
+        }
+
         .news-title-r {
             font-size: 14px;
             font-weight: normal;
@@ -635,15 +646,88 @@
             overflow: hidden;
             text-overflow: ellipsis;
             max-height: 36px;
-            
+
 
             a {
-                color: #333;
+                color: @txt-dark;
             }
 
             a:hover {
                 color: @hover-color; 
             }
         }
+
+        .news-intro-r {
+            margin-top: 10px; 
+            .text-ellipsis();
+        }
+    }
+}
+.tag-box {
+    padding-bottom: 0;
+}
+.tag-list {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #d9d9d9;
+    .clearfix();
+
+    .tag-title {
+        font-size: 16px;
+        color: @txt-light;
+        margin-bottom: 16px;
+    }
+
+    ul {
+        .clearfix();
+    }
+    .tag-item {
+        width: 33.33%;
+        float: left;
+        margin-bottom: 20px;
+
+        a {
+            color: @txt-dark;
+        }
+
+        a:hover {
+            color: @hover-color; 
+        }
+
+        .icon {
+            width: 14px;
+            height: 14px;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+
+        .pic {
+            width: 100%;
+            height: 100%;
+        }
+
+        .tag-label {
+            vertical-align: middle;
+            line-height: 14px;
+            .text-ellipsis();
+        }
+    }
+}
+.tag-list:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+.refresh-btn {
+    width: 40px;
+    height: 40px;
+    background: url("../images/refresh-btn.png") no-repeat top left;
+    position: fixed;
+    bottom: 90px;
+    left: 50%;
+    margin-left: 590px;
+}
+@media screen and (max-width: @screen-md-max) {
+    .refresh-btn {
+        margin-left: 380px;
     }
 }

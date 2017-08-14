@@ -25,7 +25,8 @@ html {
 }
 body {
   margin: 0;
-  font-size: 12px;
+  font: 12px 'Arial', 'Microsoft YaHei';
+  overflow-x: hidden;
 }
 article,
 aside,
@@ -206,6 +207,11 @@ ol {
 p {
   margin: 0;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
 h6 {
   margin: 0;
 }
@@ -329,6 +335,7 @@ h6 {
 }
 .main-content {
   width: 1170px;
+  min-width: 800px;
   margin: 0 auto;
   padding-top: 16px;
   font-size: 0;
@@ -350,6 +357,11 @@ h6 {
 }
 .main-content .main-r {
   width: 340px;
+}
+@media screen and (max-width: 1006px) {
+  .main-content .main-r {
+    display: none;
+  }
 }
 .main-content .menu li {
   margin-bottom: 3px;
@@ -792,6 +804,11 @@ h6 {
   float: right;
   margin: 0 0 0 10px;
 }
+.news-list .news-item .news-content-r {
+  height: 70px;
+  display: table-cell;
+  vertical-align: middle;
+}
 .news-list .news-item .news-title-r {
   font-size: 14px;
   font-weight: normal;
@@ -803,8 +820,93 @@ h6 {
   max-height: 36px;
 }
 .news-list .news-item .news-title-r a {
-  color: #333;
+  color: #333333;
 }
 .news-list .news-item .news-title-r a:hover {
   color: #eb7350;
+}
+.news-list .news-item .news-intro-r {
+  margin-top: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.tag-box {
+  padding-bottom: 0;
+}
+.tag-list {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #d9d9d9;
+  display: block;
+}
+.tag-list:after {
+  display: block;
+  content: ".";
+  width: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.tag-list .tag-title {
+  font-size: 16px;
+  color: #808080;
+  margin-bottom: 16px;
+}
+.tag-list ul {
+  display: block;
+}
+.tag-list ul:after {
+  display: block;
+  content: ".";
+  width: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.tag-list .tag-item {
+  width: 33.33%;
+  float: left;
+  margin-bottom: 20px;
+}
+.tag-list .tag-item a {
+  color: #333333;
+}
+.tag-list .tag-item a:hover {
+  color: #eb7350;
+}
+.tag-list .tag-item .icon {
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+.tag-list .tag-item .pic {
+  width: 100%;
+  height: 100%;
+}
+.tag-list .tag-item .tag-label {
+  vertical-align: middle;
+  line-height: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.tag-list:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+.refresh-btn {
+  width: 40px;
+  height: 40px;
+  background: url("../images/refresh-btn.png") no-repeat top left;
+  position: fixed;
+  bottom: 90px;
+  left: 50%;
+  margin-left: 590px;
+}
+@media screen and (max-width: 1006px) {
+  .refresh-btn {
+    margin-left: 380px;
+  }
 }
